@@ -4,16 +4,16 @@
 <head>
   <!-- Add a plain CSS file: see https://trunkrs.dev/assets/#css -->
   <!-- If using Tailwind with Leptos CSR, see https://trunkrs.dev/assets/#tailwind instead-->
-  <link rel="stylesheet" href="/parshulp-QA-demo/styles-b5eb075cb5908791.css" integrity="sha384-z81odaZQ6a5WhRrkbxOfk6unNzh76wIzcnOsVEZrWICZlAB3CP0qZHEFT9ZauTJb"/>
+  <link rel="stylesheet" href="/parshulp-qa-csr-demo/styles-b5eb075cb5908791.css" integrity="sha384-z81odaZQ6a5WhRrkbxOfk6unNzh76wIzcnOsVEZrWICZlAB3CP0qZHEFT9ZauTJb"/>
 
   <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
-  <link rel="icon" href="/parshulp-QA-demo/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384-YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi+qSXEpwp+yM4BW"/>
+  <link rel="icon" href="/parshulp-qa-csr-demo/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384-YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi+qSXEpwp+yM4BW"/>
 
   <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
   
 <script type="module">
-import init, * as bindings from '/parshulp-QA-demo/parshulp-qa-csr-demo-4b1fb9f7c9f4f8a4.js';
-const wasm = await init({ module_or_path: '/parshulp-QA-demo/parshulp-qa-csr-demo-4b1fb9f7c9f4f8a4_bg.wasm' });
+import init, * as bindings from '/parshulp-qa-csr-demo/parshulp-qa-csr-demo-6c2e7a5787b10a96.js';
+const wasm = await init({ module_or_path: '/parshulp-qa-csr-demo/parshulp-qa-csr-demo-6c2e7a5787b10a96_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -22,7 +22,7 @@ window.wasmBindings = bindings;
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
-<link rel="modulepreload" href="/parshulp-QA-demo/parshulp-qa-csr-demo-4b1fb9f7c9f4f8a4.js" crossorigin="anonymous" integrity="sha384-XLtSr97qMeIOhuSMKLcmEgADnaTQhPnc70mJ2dSGqWO2BstU+EZ2BLe26XApV9JG"><link rel="preload" href="/parshulp-QA-demo/parshulp-qa-csr-demo-4b1fb9f7c9f4f8a4_bg.wasm" crossorigin="anonymous" integrity="sha384-pu6I8xuMKSjLBqeRVhRVddPAzMw6w/gOX0rlLPT3CzxXEI1BPAE4tDeoNYztxZe0" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/parshulp-qa-csr-demo/parshulp-qa-csr-demo-6c2e7a5787b10a96.js" crossorigin="anonymous" integrity="sha384-XLtSr97qMeIOhuSMKLcmEgADnaTQhPnc70mJ2dSGqWO2BstU+EZ2BLe26XApV9JG"><link rel="preload" href="/parshulp-qa-csr-demo/parshulp-qa-csr-demo-6c2e7a5787b10a96_bg.wasm" crossorigin="anonymous" integrity="sha384-zygnXfCKj9qqoTnoCB2tIde9t/URfkazjCVHokVAJq9kAxMY7x4Xj/rF4KFPk3EB" as="fetch" type="application/wasm"></head>
 
 <body></body>
 
