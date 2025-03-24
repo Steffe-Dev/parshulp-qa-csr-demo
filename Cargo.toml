@@ -6,9 +6,6 @@ authors = ["Frans Stefanus Bothma <fstefanusbothma@gmail.com>"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[package.metadata.leptos]
-site-root = "docs"
-
 [dependencies]
 leptos = { version = "0.7", features = ["csr"] }
 leptos_meta = { version = "0.7" }
