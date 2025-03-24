@@ -27,7 +27,7 @@ jobs:
       run: cargo install trunk wasm-bindgen-cli
       
     - name: Build Leptos App
-      run: trunk build --release --public-url /parshulp-QA-demo/ --dist docs
+      run: trunk build --release --public-url /parshulp-qa-csr-demo --dist docs
 
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
