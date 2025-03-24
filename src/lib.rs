@@ -1,3 +1,4 @@
+use components::{nav::Nav, question::Question};
 use leptos::prelude::*;
 use leptos_meta::*;
 use leptos_router::{components::*, path};
@@ -26,10 +27,17 @@ pub fn App() -> impl IntoView {
         <Meta charset="UTF-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <Router>
-            <Routes fallback=|| view! { <NotFound /> }>
-                <Route path=path!("") view=Home />
-            </Routes>
-        </Router>
+        <section class="bg-black text-white h-screen">
+
+            <Router>
+                <Nav />
+                <Routes fallback=|| view! { <NotFound /> }>
+                    <Route path=path!("/") view=Home />
+                    <Route path=path!(":id") view=Question />
+                    <Route path=path!("/*any") view=Home />
+                </Routes>
+            </Router>
+
+        </section>
     }
 }
