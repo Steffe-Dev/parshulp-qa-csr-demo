@@ -1,0 +1,35 @@
+name: Deploy Leptos to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Install Rust
+      uses: dtolnay/rust-toolchain@stable
+      with:
+          targets: wasm32-unknown-unknown
+      
+    - name: Install Trunk
+      run: cargo install trunk wasm-bindgen-cli
+      
+    - name: Build Leptos App
+      run: trunk build --release --public-url /my-leptos-app/ --dist docs
+
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+          branch: gh-pages
+          folder: docs
