@@ -55,7 +55,7 @@ pub fn App() -> impl IntoView {
                         }>
                             <ToasterProvider>
                                 <Routes fallback=|| view! { <NotFound /> }>
-                                    <Route path=path!("parshulp-qa-csr-demo/") view=Questions />
+                                    <Route path=path!("parshulp-qa-csr-demo") view=Questions />
                                     <Route
                                         path=path!("parshulp-qa-csr-demo/:id")
                                         view=QuestionAnswers
