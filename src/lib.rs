@@ -35,9 +35,9 @@ pub fn App() -> impl IntoView {
                     </LayoutHeader>
                     <Layout>
                         <Routes fallback=|| view! { <NotFound /> }>
-                            <Route path=path!("/") view=Questions />
-                            <Route path=path!(":id") view=QuestionAnswers />
-                            <Route path=path!("/*") view=Questions />
+                            <Route path=path!("parshulp-qa-csr-demo/") view=Questions />
+                            <Route path=path!("parshulp-qa-csr-demo/:id") view=QuestionAnswers />
+                            <Route path=path!("/*any") view=Questions />
                         </Routes>
                     </Layout>
                 </Layout>
