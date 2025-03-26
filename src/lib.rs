@@ -8,6 +8,7 @@ use thaw::*;
 // Modules
 mod components;
 mod pages;
+mod util;
 
 // Top-Level pages
 use crate::pages::questions::Questions;
@@ -34,11 +35,35 @@ pub fn App() -> impl IntoView {
                         <Nav />
                     </LayoutHeader>
                     <Layout>
-                        <Routes fallback=|| view! { <NotFound /> }>
-                            <Route path=path!("parshulp-qa-csr-demo/") view=Questions />
-                            <Route path=path!("parshulp-qa-csr-demo/:id") view=QuestionAnswers />
-                            <Route path=path!("/*any") view=Questions />
-                        </Routes>
+                        <ErrorBoundary fallback=|errors| {
+                            view! {
+                                <h1>"Uh oh! Something went wrong!"</h1>
+
+                                <p>"Errors: "</p>
+                                // Render a list of errors as strings - good for development purposes
+                                <ul>
+                                    {move || {
+                                        errors
+                                            .get()
+                                            .into_iter()
+                                            .map(|(_, e)| view! { <li>{e.to_string()}</li> })
+                                            .collect_view()
+                                    }}
+
+                                </ul>
+                            }
+                        }>
+                            <ToasterProvider>
+                                <Routes fallback=|| view! { <NotFound /> }>
+                                    <Route path=path!("parshulp-qa-csr-demo/") view=Questions />
+                                    <Route
+                                        path=path!("parshulp-qa-csr-demo/:id")
+                                        view=QuestionAnswers
+                                    />
+                                    <Route path=path!("/*any") view=Questions />
+                                </Routes>
+                            </ToasterProvider>
+                        </ErrorBoundary>
                     </Layout>
                 </Layout>
             </Router>
