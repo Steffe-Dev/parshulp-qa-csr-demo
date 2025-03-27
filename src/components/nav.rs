@@ -8,8 +8,12 @@ pub fn Nav() -> impl IntoView {
             <A href="/parshulp-qa-csr-demo">
                 <span class="text-2xl font-light">"Parshulp"</span>
             </A>
-            <A href="/parshulp-qa-csr-demo">
-            <span class="h-10 w-10 rounded-full bg-white flex justify-center items-center text-black">"RvN"</span>
+            <A href="/parshulp-qa-csr-demo/profile/Renee_vn">
+                <img
+                    class="h-12 w-12 rounded-full border-4 border-black"
+                    src="https://cataas.com/cat?type=square"
+                    alt="Pfp"
+                />
             </A>
         </div>
     }
