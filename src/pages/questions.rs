@@ -52,7 +52,7 @@ pub fn Questions() -> impl IntoView {
                             <CardHeader>
                                 <Body1>
                                     <A href=move || {
-                                        format!("{}?question_text={}", id.get(), question.get())
+                                        format!("{}", id.get())
                                     }>{move || question.get()}</A>
                                 </Body1>
                                 <CardHeaderDescription slot>
@@ -89,7 +89,7 @@ pub fn Questions() -> impl IntoView {
                                                     <A href=format!("?filter_by={}", tag.get())>
                                                         <InteractionTag>
                                                             <InteractionTagPrimary>
-                                                                {move ||tag.get()}
+                                                                {move || tag.get()}
                                                             </InteractionTagPrimary>
                                                         </InteractionTag>
                                                     </A>

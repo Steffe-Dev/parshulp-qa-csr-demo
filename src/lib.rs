@@ -31,7 +31,7 @@ pub fn App() -> impl IntoView {
         <ConfigProvider theme>
             <Router>
                 <Layout class="bg-black text-white h-screen w-screen">
-                    <LayoutHeader>
+                    <LayoutHeader class="sticky top-0 z-10">
                         <Nav />
                     </LayoutHeader>
                     <Layout>
