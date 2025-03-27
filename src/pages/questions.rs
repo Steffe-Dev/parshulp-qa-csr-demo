@@ -69,7 +69,11 @@ pub fn Questions() -> impl IntoView {
                                                 icon=icondata::AiMoreOutlined
                                             />
                                         </MenuTrigger>
-                                        <MenuItem value="answer">"Answer Question"</MenuItem>
+                                        <MenuItem value="answer">
+                                        <A href=move || format!("add_answer/{}", id.get())>
+                                        "Answer Question"
+                                        </A>
+                                        </MenuItem>
                                         <MenuItem value="report" class="text-red-500">
                                             "Report"
                                         </MenuItem>

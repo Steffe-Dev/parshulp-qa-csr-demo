@@ -2,7 +2,9 @@ use components::nav::Nav;
 use leptos::prelude::*;
 use leptos_meta::*;
 use leptos_router::{components::*, path};
-use pages::{not_found::NotFound, profile::Profile, question_answers::QuestionAnswers};
+use pages::{
+    add_answer::AddAnswer, not_found::NotFound, profile::Profile, question_answers::QuestionAnswers,
+};
 use thaw::*;
 
 // Modules
@@ -59,6 +61,10 @@ pub fn App() -> impl IntoView {
                                     <Route
                                         path=path!("parshulp-qa-csr-demo/:id")
                                         view=QuestionAnswers
+                                    />
+                                    <Route
+                                        path=path!("parshulp-qa-csr-demo/add_answer/:id")
+                                        view=AddAnswer
                                     />
                                     <Route
                                         path=path!("parshulp-qa-csr-demo/profile/:username")

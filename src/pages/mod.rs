@@ -1,3 +1,4 @@
+pub mod add_answer;
 pub mod not_found;
 pub mod profile;
 pub mod question_answers;
