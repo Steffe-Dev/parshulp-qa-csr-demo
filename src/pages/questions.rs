@@ -56,7 +56,7 @@ pub fn Questions() -> impl IntoView {
                                     }>{move || question.get()}</A>
                                 </Body1>
                                 <CardHeaderDescription slot>
-                                    <Caption1>"Added by Renee_vn"</Caption1>
+                                    <Caption1>"Added by Renee_vn (50)"</Caption1>
                                 </CardHeaderDescription>
                                 <CardHeaderAction slot>
                                     <Menu

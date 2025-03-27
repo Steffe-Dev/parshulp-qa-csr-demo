@@ -147,6 +147,11 @@ pub fn QuestionAnswers() -> impl IntoView {
                     }
                 }
             />
+            <Show when=move || answers().rows().get().is_empty()>
+                <span class="italic">
+                    "No answers yet. Please check back later, or expore other questions in the meantime."
+                </span>
+            </Show>
         </Flex>
     }
 }
