@@ -22,7 +22,7 @@ pub fn Profile() -> impl IntoView {
             <div class="flex flex-col justfiy-center items-center pt-8 gap-5">
                 <div class="inline-block relative">
                     <img
-                        class="h-32 w-32 rounded-full"
+                        class="size-32 rounded-full"
                         src="https://cataas.com/cat/orange?type=square"
                         alt="Pfp"
                     />

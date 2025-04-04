@@ -10,7 +10,7 @@ pub fn Nav() -> impl IntoView {
             </A>
             <A href="/parshulp-qa-csr-demo/profile/Renee_vn">
                 <img
-                    class="h-12 w-12 rounded-full border-4 border-black"
+                    class="size-12 rounded-full border-4 border-black"
                     src="https://cataas.com/cat/orange?type=square"
                     alt="Pfp"
                 />
